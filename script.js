@@ -47,6 +47,13 @@ legend1ClearBtn.addEventListener("click", function (){
         entireTable[i].classList.remove('table-success')
         entireTable[i].style.removeProperty("background-color")
     }
+    for (i = 0; i < legend1btn.length; i++){
+        if (legend1btn[i].classList.contains("btn-warning")){
+            legend1btn[i].classList.remove("btn-warning")
+            legend1btn[i].classList.add("btn-primary")
+        }
+    }
+
     colorSet()
 })
 
