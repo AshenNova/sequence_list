@@ -7,30 +7,30 @@ const legend1AppearBtn = document.querySelector(".legend1-appear")
 const legend1ClearBtn = document.querySelector(".legend1-clear")
 const entireTable = document.querySelectorAll('td')
 
-
-function filterColor (){
-    if (entireTable[i].innerHTML[0] == 1){
-        entireTable[i].classList.add("table-danger")
+function filterColor(a){
+    if (entireTable[a].innerHTML[0] == 1){
+        entireTable[a].classList.add("table-danger")
     }
-    if (entireTable[i].innerHTML[0] == 2){
-     entireTable[i].classList.add("table-primary")
+    if (entireTable[a].innerHTML[0] == 2){
+     entireTable[a].classList.add("table-primary")
     }
-    if (entireTable[i].innerHTML[0] == 3){
-     entireTable[i].classList.add("table-warning")
+    if (entireTable[a].innerHTML[0] == 3){
+     entireTable[a].classList.add("table-warning")
     }
-    if (entireTable[i].innerHTML[0] == 4){
-     entireTable[i].classList.add("table-info")
+    if (entireTable[a].innerHTML[0] == 4){
+     entireTable[a].classList.add("table-info")
     }
-    if (entireTable[i].innerHTML[0] == 5){
-     entireTable[i].classList.add("table-dark")
+    if (entireTable[a].innerHTML[0] == 5){
+     entireTable[a].classList.add("table-dark")
     }
-    if (entireTable[i].innerHTML[0] == "L"){
-     entireTable[i].style.backgroundColor = "red"
+    if (entireTable[a].innerHTML[0] == "L"){
+     entireTable[a].style.backgroundColor = "#F28583"
     }
 }
-function colorSet () {
+
+function colorSet() {
     for (i = 0; i < entireTable.length; i++){
-      filterColor()
+      filterColor(i)
     }
 }
 
@@ -80,6 +80,7 @@ for (i = 0; i < legend1btn.length; i++){
 
     for (i = 0; i < entireTable.length; i++){
         if ((entireTable[i].innerHTML) == pokemonName){
+            console.log(i)
             // entireTable[i].classList.toggle("table-success")
            
             // if (entireTable[i].classList.contains("limegreen")){
@@ -87,12 +88,13 @@ for (i = 0; i < legend1btn.length; i++){
             // }
             if (entireTable[i].style.backgroundColor == "limegreen"){
                 entireTable[i].style.removeProperty("background-color")
-                filterColor()
+                // filterColor(i)
+                console.log("changed back")
             } else {
                 entireTable[i].style.backgroundColor = "limegreen"
+                console.log("limegreen!")
             }
         }
     }
     })
 }
-

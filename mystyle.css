@@ -1,15 +1,16 @@
 #legend1 {
-    position: absolute;
+    position: fixed;
     opacity: 0.7
 
 }
 
-#legend1-table .td{
-    width: 5px;
+#legend1-table{
+    table-layout: 100%;
 }
 
 .legend1btn {
-    width: 100%
+    width: 100%;
+    margin: 5px 0;
 }
 
 .hidden {
