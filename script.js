@@ -73,14 +73,16 @@ for (i = 0; i < legend1Class.length; i++ ){
 
 for (i = 0; i < legend1btn.length; i++){
     console.log("click")
+    
     legend1btn[i].addEventListener("click", function onClick(event){
+        const audio = new Audio("sounds/yellow.mp3")
+        audio.play();
         console.log(event.target.innerHTML)
         let pokemonName = (event.target.innerText)
         let target = event.target.id
 
     for (i = 0; i < entireTable.length; i++){
         if ((entireTable[i].innerHTML) == pokemonName){
-            console.log(i)
             // entireTable[i].classList.toggle("table-success")
            
             // if (entireTable[i].classList.contains("limegreen")){
@@ -88,11 +90,8 @@ for (i = 0; i < legend1btn.length; i++){
             // }
             if (entireTable[i].style.backgroundColor == "limegreen"){
                 entireTable[i].style.removeProperty("background-color")
-                // filterColor(i)
-                console.log("changed back")
             } else {
                 entireTable[i].style.backgroundColor = "limegreen"
-                console.log("limegreen!")
             }
         }
     }
