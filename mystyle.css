@@ -1,0 +1,17 @@
+#legend1 {
+    position: absolute;
+    opacity: 0.7
+
+}
+
+#legend1-table .td{
+    width: 5px;
+}
+
+.legend1btn {
+    width: 100%
+}
+
+.hidden {
+    display: none;
+}
