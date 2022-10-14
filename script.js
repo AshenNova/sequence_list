@@ -54,7 +54,6 @@ for (i = 0; i < legend1Class.length; i++ ){
     legend1Class[i].addEventListener("click", function (e){
         console.log(e)
         console.log(document.getElementsByClassName("legend1-1-stars"))
-        // document.getElementsByClassName("legend1-1-stars")[0].classList.remove("hidden")
 
         for (i = 0 ; i < legend1.length; i++){
             console.log(e.target.innerHTML)
@@ -80,9 +79,17 @@ for (i = 0; i < legend1btn.length; i++){
         console.log(event.target.innerHTML)
         let pokemonName = (event.target.innerText)
         let target = event.target.id
-
+    
+    for (i = 0; i < legend1btn.length; i++){
+        if (pokemonName == legend1btn[i].innerHTML){
+            legend1btn[i].classList.toggle("btn-primary")
+            legend1btn[i].classList.toggle("btn-warning")
+        }
+    }    
+    
     for (i = 0; i < entireTable.length; i++){
         if ((entireTable[i].innerHTML) == pokemonName){
+            
             // entireTable[i].classList.toggle("table-success")
            
             // if (entireTable[i].classList.contains("limegreen")){
