@@ -7,6 +7,26 @@ const legend1AppearBtn = document.querySelector(".legend1-appear")
 const legend1ClearBtn = document.querySelector(".legend1-clear")
 const entireTable = document.querySelectorAll('td')
 
+const columnsArr = ["A","B","C","D","E","F","G","H"]
+let countArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+function loopCount(set){
+    if (set == 0){
+        for ( let i = 0; i < 8; i++){
+            document.querySelector(".count"+columnsArr[i]).textContent = ""
+        }
+    }
+    if (set == 1){
+        for ( let i = 0; i < 8; i++){
+            document.querySelector(".count"+columnsArr[i]).textContent = countArr[i]
+
+            if (countArr[i] == 0){
+                document.querySelector(".count"+columnsArr[i]).textContent = ""
+            }
+        }
+    }
+}
+
 function filterColor(a){
     if (entireTable[a].innerHTML[0] == 1){
         entireTable[a].classList.add("table-danger")
@@ -53,14 +73,15 @@ legend1ClearBtn.addEventListener("click", function (){
             legend1btn[i].classList.add("btn-primary")
         }
     }
-
+    countArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+    loopCount(0)
     colorSet()
 })
 
 for (i = 0; i < legend1Class.length; i++ ){
     legend1Class[i].addEventListener("click", function (e){
-        console.log(e)
-        console.log(document.getElementsByClassName("legend1-1-stars"))
+        // console.log(e)
+        // console.log(document.getElementsByClassName("legend1-1-stars"))
 
         for (i = 0 ; i < legend1.length; i++){
             console.log(e.target.innerHTML)
@@ -104,9 +125,17 @@ for (i = 0; i < legend1btn.length; i++){
             // }
             if (entireTable[i].style.backgroundColor == "limegreen"){
                 entireTable[i].style.removeProperty("background-color")
+                countArr[i%countArr.length]--
+                console.log(countArr)
+                loopCount(1)
             } else {
                 entireTable[i].style.backgroundColor = "limegreen"
+                countArr[i%countArr.length]++
+                console.log(countArr)
+                loopCount(1)
+             
             }
+       
         }
     }
     })

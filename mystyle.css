@@ -20,3 +20,7 @@
 .legend1-clear {
     float: right;
 }
+
+.countA, .countB, .countC, .countD, .countE, .countF, .countG, .countH {
+    font-size: 1.5em;
+}
