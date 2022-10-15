@@ -128,6 +128,7 @@ for (i = 0; i < legend1btn.length; i++){
                 countArr[i%countArr.length]--
                 console.log(countArr)
                 loopCount(1)
+                filterColor(i)
             } else {
                 entireTable[i].style.backgroundColor = "limegreen"
                 countArr[i%countArr.length]++
