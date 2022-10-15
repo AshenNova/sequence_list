@@ -102,7 +102,7 @@ for (i = 0; i < legend1btn.length; i++){
     console.log("click")
     
     legend1btn[i].addEventListener("click", function onClick(event){
-        const audio = new Audio("sounds/yellow.mp3")
+        const audio = new Audio("sounds/click.m4a")
         audio.play();
         console.log(event.target.innerHTML)
         let pokemonName = (event.target.innerText)
