@@ -24,3 +24,30 @@
 .countA, .countB, .countC, .countD, .countE, .countF, .countG, .countH {
     font-size: 1.5em;
 }
+
+.navbar {
+    margin-bottom: 2%;
+}
+
+/* index */
+
+.epicmind, .carousell, .telegram_qr {
+    max-width: 100%;
+    min-width: 100%;
+    position: static
+}
+
+.index-row {
+    margin: 1% 0;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+
+.fa-facebook, .fa-whatsapp, .fa-telegram {
+    margin-right: 1%;
+   font-size: 30px
+}  
+
