@@ -1,14 +1,14 @@
-#legend1 {
+#legend1, #part4 {
     position: fixed;
     opacity: 0.8
 
 }
 
-#legend1-table{
+#legend1-table, #part4-table{
     table-layout: 100%;
 }
 
-.legend1btn {
+.legend1btn, .part4btn {
     width: 100%;
     margin: 5px 0;
 }
@@ -17,7 +17,7 @@
     display: none;
 }
 
-.legend1-clear {
+.legend1-clear, .part4-clear {
     float: right;
 }
 
@@ -30,6 +30,10 @@
 }
 
 /* index */
+
+.index-nav {
+    position: sticky
+}
 
 .epicmind, .carousell, .telegram_qr {
     max-width: 100%;
