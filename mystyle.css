@@ -14,8 +14,9 @@
     opacity: 1;
     color: yellow;
     text-align: left;
-    padding-left: 2%;
-    margin-top: 1%
+    padding: 1% 2% 1%;
+    margin-top: 1%;
+    border-radius: 25px 
 }
 
 .legend1btn, .part4btn {
@@ -77,5 +78,8 @@
         width: 80%;
         margin: 5% 0;
         font-size: 2em !important;
+    }
+    #choice{
+        font-size: 1.5em
     }
   }
