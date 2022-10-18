@@ -37,7 +37,7 @@ const rowArr = ["3* Butterfree", "1* Ralts", "3* Golduck", "1* Crabrawler", "1* 
                 "2* Hakamo-o", "L* Pikachu", "2* Starmie", "2* Gabite", "2* Crabominable", "2* Golduck", "1* Crabrawler", "1* Staryu",
                 "3* Lycanroc", "3* Vikavolt", "3* Butterfree", "2* Rockruff", "3* Pelipper", "1* Gible", "1* Goomy", "1* Jangmo-o",
                 "2* Sliggoo", "2* Wimpod", "4* Turtonator", "L* Charizard", "1* Psyduck", "L* Pikachu", "2* Pelipper", "3* Hydreigon",
-                "2* Crabominable", "2* Kirlia", "2* Gabite", "1* Deino", "5* Grenina", "3* Gyarados", "3* Starmie", "1* Grubbin",
+                "2* Crabominable", "2* Kirlia", "2* Gabite", "1* Deino", "5* Greninja", "3* Gyarados", "3* Starmie", "1* Grubbin",
                 "2* Wimpod", "2* Pelipper", "2* Metapod", "2* Crabominable", "1* Crabrawler", "1* Staryu", "4* Garchomp", "L* Pikachu",
                 "1* Caterpie", "1* Staryu", "1* Ralts", "1* Caterpie", "3* Turtonator", "3* Lycanroc", "2* Sliggoo", "2* Metapod",
                 "2* Zweilous", "4* Kommo-o", "3* Goodra", "3* Kangaskhan", "3* Golisopod", "1* Crabrawler", "2* Wimpod", "2* Hakamo-o",
