@@ -5,7 +5,17 @@
 }
 
 #legend1-table, #part4-table{
-    table-layout: 100%;
+    table-layout: auto;
+    /* overflow-x: hidden */
+}
+
+#choice{
+    background: blue;
+    opacity: 1;
+    color: yellow;
+    text-align: left;
+    padding-left: 2%;
+    margin-top: 1%
 }
 
 .legend1btn, .part4btn {
