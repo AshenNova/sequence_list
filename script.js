@@ -25,6 +25,17 @@ const clearBtn = document.querySelector("."+part+"-clear")
 const entireTable = document.querySelectorAll('td')
 
 const choiceText = document.getElementById("choice-text")
+const counterEl = document.getElementById("counter")
+
+function updateVisitCount(){
+    fetch("https://api.countapi.xyz/update/gaolesequencelist.heroku.com/gaole/?amount=1")
+    .then(res => res.json())
+    .then(res => {
+        counterEl.innerHTML = res.value;
+    });
+}
+
+updateVisitCount()
 
 const columnsArr = ["A","B","C","D","E","F","G","H"]
 let countArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
