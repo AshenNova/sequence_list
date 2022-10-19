@@ -46,8 +46,13 @@
     height: 100px;
     border: solid 2px;
     display: block;
-    margin: auto
+    margin: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
+
+#part4brochure:hover, #legend1brochure:hover {opacity: 0.7;}
 
 #caption {
     margin: auto;
