@@ -41,8 +41,23 @@
         <h1>Part 4</h1>
         <br>
         <div class="container">
-            <button type="button" class="btn btn-success btn-lg part4-appear">Select</button>
-            <button type="button" class="btn btn-danger  btn-lg part4-clear">Clear</button>
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-success btn-lg part4-appear">Select</button>
+                </div>
+                <div class="col-4">
+                    <img src="images/singapore_part4.jpeg" id="part4brochure" alt="Singapore_part4">
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-danger btn-lg part4-clear">Clear</button>
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="part4modal">
+            <div id="caption"></div>
         </div>
         <div class="container hidden text-center" id="part4">
             <row>

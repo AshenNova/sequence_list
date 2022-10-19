@@ -41,6 +41,27 @@ const columnsArr = ["A","B","C","D","E","F","G","H"]
 let countArr = [0, 0, 0, 0, 0, 0, 0, 0, 0]
 let choiceArr = []
 
+                            // FOR BROCHURE!
+
+const modal = document.getElementById("myModal");
+
+// Get the image and insert it inside the modal - use its "alt" text as a caption
+const img = document.getElementById(part+"brochure");
+const modalImg = document.getElementById(part+"modal");
+const captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
 
 // const part4 = {
 //     star1: ["1* Caterpie", "1* Crabrawler", "1* Staryu", "1* Psyduck", "1* Wingull", "1* Grubbin", "1* Goomy", "1* Deino", "1* Jangmo-o", "Ralts", "1* Gible"],

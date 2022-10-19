@@ -41,8 +41,23 @@
         <h1>Legend 1</h1>
         <br>
         <div class="container">
-            <button type="button" class="btn btn-success btn-lg legend1-appear">Select</button>
-            <button type="button" class="btn btn-danger btn-lg legend1-clear">Clear</button>
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-success btn-lg legend1-appear">Select</button>
+                </div>
+                <div class="col-4">
+                    <img src="images/malaysia_legend1.jpeg" id="legend1brochure" alt="Malaysia_legend1">
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-danger btn-lg legend1-clear">Clear</button>
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="legend1modal">
+            <div id="caption"></div>
         </div>
         <div class="container hidden text-center" id="legend1">
             <row>
