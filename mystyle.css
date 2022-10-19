@@ -1,3 +1,4 @@
+
 #legend1, #part4 {
     position: fixed;
     opacity: 0.8
@@ -16,7 +17,7 @@
     text-align: left;
     padding: 1% 2% 1%;
     margin-top: 1%;
-    border-radius: 15px 
+    border-radius: 5px 
 }
 
 .legend1btn, .part4btn {
@@ -40,7 +41,19 @@
 
 .navbar {
     margin-bottom: 2%;
+    font-family:'Times New Roman', Times, serif;
+    /* text-shadow: 2px 2px 4px #FFFF00; */
+    color: white;
 }
+
+.navbar-brand{
+    /* position: relative; */
+    background: url(images/pokeball.png);
+    background-size: cover;
+    /* color: black !important; */
+    text-shadow: 2px 2px 4px #000000;
+}
+
 
 /* index */
 
