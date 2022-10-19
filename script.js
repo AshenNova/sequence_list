@@ -156,9 +156,14 @@ if (part == "part4"){
 }
  
 function displayArr(){
-    let string = choiceArr.join(', ').split(",")
-    choiceText.textContent = `${choiceArr.length}: ${string}`
+    let string = choiceArr.join(' 🁢 ').split(",")
+    console.log(choiceArr)
+    choiceText.innerHTML = `${choiceArr.length}: ${string}`
+    // choiceArr.forEach((item, i) => {
+    //     choiceText.innerHTML = i+1+ ": " +item
+    // })
 }
+
 function loopCount(set){
     if (set == 0){
         for ( let i = 0; i < 8; i++){
