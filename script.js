@@ -306,13 +306,14 @@ for (let i = 0; i < btnClass.length; i++ ){
 }
 
 function animationCount(set, i){
+    const duration = 3000
     if (set == 1) {
         document.querySelector(".count"+columnsArr[i%8]).classList.add("animate-add")
-        setTimeout(() => document.querySelector(".count"+columnsArr[i%8]).classList.remove("animate-add"), 500)
+        setTimeout(() => document.querySelector(".count"+columnsArr[i%8]).classList.remove("animate-add"), duration)
     }
     if ( set == 0) {
         document.querySelector(".count"+columnsArr[i%8]).classList.add("animate-remove")
-        setTimeout(() => document.querySelector(".count"+columnsArr[i%8]).classList.remove("animate-remove"), 500)
+        setTimeout(() => document.querySelector(".count"+columnsArr[i%8]).classList.remove("animate-remove"), duration)
     }
 }
 

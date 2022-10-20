@@ -123,6 +123,8 @@
 
 .countA, .countB, .countC, .countD, .countE, .countF, .countG, .countH {
     font-size: 1.5em;
+    padding: 5px;
+    border-radius: 5px
 }
 
 .navbar {
@@ -141,13 +143,13 @@
 }
 
 .animate-add{
- color: limegreen;
+ background-color: limegreen;
  text-shadow: 2px 2px 4px whitesmoke;
  /* transform: scale(1.5); */
 }
 
 .animate-remove{
- color: red;
+ background-color: red;
  /* transform: scale(0.5); */
 }
 /* index */
