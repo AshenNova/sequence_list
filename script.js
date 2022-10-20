@@ -212,6 +212,18 @@ function loopCount(set){
         }
     }
 }
+// function animateCount(set, column){
+//     if (set == -1){
+//         console.log("red")
+//         document.querySelector(".count"+columnsArr[column]).classList.add("animate-remove")
+//         setTimeout(() =>  document.querySelector(".count"+columnsArr[column]).classList.remove("animate-remove"), 331)
+//     }
+//     if (set == 1){
+//         console.log("green")
+//         document.querySelector(".count"+columnsArr[column]).classList.add("animate-add")
+//         setTimeout(() =>  document.querySelector(".count"+columnsArr[column]).classList.remove("animate-add"), 331)
+//     }
+// }
 
 function filterColor(a){
     if (entireTable[a].innerHTML[0] == 1){
@@ -283,7 +295,7 @@ for (let i = 0; i < btnClass.length; i++ ){
            
             console.log(e.target.innerHTML)
           
-            if (btnPokemon[i].classList.contains(e.target.innerHTML)){
+            if (btnPokemon[i].classList.contains(e.target.innerText)){
                 btnPokemon[i].classList.toggle("hidden")
             } else {
                 btnPokemon[i].classList.add("hidden")
@@ -291,6 +303,17 @@ for (let i = 0; i < btnClass.length; i++ ){
             
         }
     })
+}
+
+function animationCount(set, i){
+    if (set == 1) {
+        document.querySelector(".count"+columnsArr[i%8]).classList.add("animate-add")
+        setTimeout(() => document.querySelector(".count"+columnsArr[i%8]).classList.remove("animate-add"), 500)
+    }
+    if ( set == 0) {
+        document.querySelector(".count"+columnsArr[i%8]).classList.add("animate-remove")
+        setTimeout(() => document.querySelector(".count"+columnsArr[i%8]).classList.remove("animate-remove"), 500)
+    }
 }
 
 for (i = 0; i < btnPress.length; i++){
@@ -312,16 +335,12 @@ for (i = 0; i < btnPress.length; i++){
     
     for (let i = 0; i < entireTable.length; i++){
         if ((entireTable[i].innerHTML) == pokemonName){
-            
-            // entireTable[i].classList.toggle("table-success")
-           
-            // if (entireTable[i].classList.contains("limegreen")){
-            //     colorSet()
-            // }
+
             if (entireTable[i].style.backgroundColor == "limegreen"){
+                
                 entireTable[i].style.removeProperty("background-color")
                 countArr[i%columnsArr.length]--
-                console.log(countArr)
+                animationCount(0, i)
                 loopCount(1)
                 filterColor(i)
                 if (choiceArr.includes(entireTable[i].innerHTML)){
@@ -331,9 +350,10 @@ for (i = 0; i < btnPress.length; i++){
                 }
                
             } else {
+                let column = document.querySelector(".count"+columnsArr[i])
                 entireTable[i].style.backgroundColor = "limegreen"
                 countArr[i%columnsArr.length]++
-                console.log(countArr)
+                animationCount(1, i)
                 loopCount(1)
                 if (!choiceArr.includes(entireTable[i].innerHTML)){
                     choiceArr.push(entireTable[i].innerHTML)

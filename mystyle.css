@@ -140,7 +140,16 @@
     text-shadow: 2px 2px 4px #000000;
 }
 
+.animate-add{
+ color: limegreen;
+ text-shadow: 2px 2px 4px whitesmoke;
+ /* transform: scale(1.5); */
+}
 
+.animate-remove{
+ color: red;
+ /* transform: scale(0.5); */
+}
 /* index */
 
 .index-nav {
