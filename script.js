@@ -335,6 +335,7 @@ for (i = 0; i < btnPress.length; i++){
     }    
     
     for (let i = 0; i < entireTable.length; i++){
+        let columnAlp = columnsArr[i%8]
         if ((entireTable[i].innerHTML) == pokemonName){
 
             if (entireTable[i].style.backgroundColor == "limegreen"){
@@ -342,6 +343,8 @@ for (i = 0; i < btnPress.length; i++){
                 entireTable[i].style.removeProperty("background-color")
                 countArr[i%columnsArr.length]--
                 animationCount(0, i)
+
+                
                 loopCount(1)
                 filterColor(i)
                 if (choiceArr.includes(entireTable[i].innerHTML)){
@@ -355,6 +358,13 @@ for (i = 0; i < btnPress.length; i++){
                 entireTable[i].style.backgroundColor = "limegreen"
                 countArr[i%columnsArr.length]++
                 animationCount(1, i)
+                console.log(columnAlp)
+                for (let x = 0; x < 50; x++){
+                    console.log(columnsArr.indexOf(columnAlp))
+                    let columnsIndex = columnsArr.indexOf(columnAlp)
+                    entireTable[columnsIndex+8*x].classList.add("animate-border-add")
+                    setTimeout(() => entireTable[columnsIndex+8*x].classList.remove("animate-border-add"), 1000)
+                }
                 loopCount(1)
                 if (!choiceArr.includes(entireTable[i].innerHTML)){
                     choiceArr.push(entireTable[i].innerHTML)
