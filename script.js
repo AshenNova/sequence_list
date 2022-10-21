@@ -360,10 +360,14 @@ for (i = 0; i < btnPress.length; i++){
                 animationCount(1, i)
                 console.log(columnAlp)
                 for (let x = 0; x < 50; x++){
-                    console.log(columnsArr.indexOf(columnAlp))
                     let columnsIndex = columnsArr.indexOf(columnAlp)
                     entireTable[columnsIndex+8*x].classList.add("animate-border-add")
                     setTimeout(() => entireTable[columnsIndex+8*x].classList.remove("animate-border-add"), 1000)
+                    // setTimeout(() => 
+                    //     entireTable[columnsIndex+8*x].fadeOut("slow", () => 
+                    //         entireTable[columnsIndex+8*x].remove("animate-border-add"), 1000
+                    //     )
+                    // )
                 }
                 loopCount(1)
                 if (!choiceArr.includes(entireTable[i].innerHTML)){
