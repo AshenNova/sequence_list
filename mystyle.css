@@ -133,6 +133,11 @@
     color: white;
 }
 
+.nav-link:hover {
+    color: yellow !important;
+    text-decoration: underline;
+}
+
 .navbar-brand{
     /* position: relative; */
     background: url(images/pokeball.png);
