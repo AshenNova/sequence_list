@@ -180,10 +180,20 @@
     margin-top: 60px;
 }
 
-.epicmind, .carousell, .telegram_qr {
+.epicmind, .carousell, .telegram_qr{
     max-width: 100%;
-    min-width: 100%;
+    /* min-width: 100%; */
     position: static
+}
+
+.buymecoffee{
+    max-width: 80%;
+    /* height: 90%; */
+    /* position: static; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
 }
 
 .gaole {
