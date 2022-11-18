@@ -1,10 +1,10 @@
-#legend1, #part4 {
+#legend2, #legend1, #part4 {
     position: fixed;
     opacity: 0.8
 
 }
  
-#legend1-table, #part4-table{
+#legend2-table, #legend1-table, #part4-table{
     table-layout: auto;
     /* overflow-x: hidden */
 }
@@ -26,7 +26,7 @@
 
 } */
 
-.legend1btn, .part4btn {
+.legend2btn, .legend1btn, .part4btn {
     width: 80%;
     margin: 5px 0;
     height: 80%;
@@ -36,11 +36,11 @@
     display: none;
 }
 
-.legend1-clear, .part4-clear {
+.legend2-clear, .legend1-clear, .part4-clear {
     float: right;
 }
 
-#part4brochure, #legend1brochure {
+#legend2brochure, #part4brochure, #legend1brochure {
     /* display: block; */
     height: 100px;
     border: solid 2px;
@@ -51,7 +51,7 @@
     transition: 0.3s;
 }
 
-#part4brochure:hover, #legend1brochure:hover {opacity: 0.7;}
+#legend2brochure, #part4brochure:hover, #legend1brochure:hover {opacity: 0.7;}
 
 #caption {
     margin: auto;
@@ -216,7 +216,7 @@
 }  
 
 @media only screen and (max-width: 540px) {
-    .legend1btn, .part4btn {
+    .legend2btn, .legend1btn, .part4btn {
         width: 80%;
         margin: 5% 0;
         font-size: 2em !important;

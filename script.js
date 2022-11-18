@@ -5,6 +5,9 @@ let part = ""
 // }
 
 switch (document.title){
+    case "Legend 2":
+        part = "legend2"
+    break
     case "Legend 1":
         part = "legend1"
     break
@@ -49,6 +52,7 @@ const modal = document.getElementById("myModal");
 const img = document.getElementById(part+"brochure");
 const modalImg = document.getElementById(part+"modal");
 const captionText = document.getElementById("caption");
+
 img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
