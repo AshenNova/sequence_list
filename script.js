@@ -31,7 +31,7 @@ const choiceText = document.getElementById("choice-text")
 const counterEl = document.getElementById("counter")
 
 function updateVisitCount(){
-    fetch("https://api.countapi.xyz/update/gaolesequencelist.heroku.com/gaole/?amount=1")
+    fetch("https://api.countapi.xyz/update/ashennova.github.io/gaole/?amount=1")
     .then(res => res.json())
     .then(res => {
         counterEl.innerHTML = res.value;
