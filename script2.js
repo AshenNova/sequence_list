@@ -6,6 +6,7 @@ const fourStarPokemon = document.querySelector(".fourStarPokemon");
 const fiveStarPokemon = document.querySelector(".fiveStarPokemon");
 const LStarPokemon = document.querySelector(".LStarPokemon");
 const pokemonAll = document.querySelector(".pokemonList");
+const pokemonIndex = document.querySelector(".pokemonIndex");
 
 console.log(document.title);
 let part = "";
@@ -64,7 +65,6 @@ console.log(array_Lstar.sort());
 
 const activeDisplay = function (pokemon, classStar) {
   let count = pokemon.length;
-  console.log(count);
   let quotient = Math.floor(count / 4);
   let remainder = count % 4;
   let a = 0;
@@ -96,7 +96,6 @@ const activeDisplay = function (pokemon, classStar) {
     `;
       a += 4;
       classStar.insertAdjacentHTML("beforeend", html);
-      console.log(i);
     }
   }
   if (remainder == 1) {
@@ -180,17 +179,117 @@ const listAllPokemon = function () {
 };
 listAllPokemon();
 
+let [...pokemonIndexOrder] = new Set(fullArray);
+console.log(pokemonIndexOrder.sort());
+const pokemonIndexList = function () {
+  const quotient = Math.floor(pokemonIndexOrder.length / 4);
+  const remainder = pokemonIndexOrder.length % 4;
+  let a = "";
+  for (let i = 0; i < quotient * 4; i++) {
+    const html = `
+    <div class="row">
+      <div class="col-sm-3 col-6">
+          <button type="button" class="btn btn-light btnCaught">${
+            pokemonIndexOrder[i]
+          }</button>
+      </div>
+      <div class="col-sm-3 col-6">
+          <button type="button" class="btn btn-light btnCaught">${
+            pokemonIndexOrder[i + 1]
+          }</button>
+      </div>
+      <div class="col-sm-3 col-6">
+          <button type="button" class="btn btn-light btnCaught">${
+            pokemonIndexOrder[i + 2]
+          }</button>
+      </div>
+      <div class="col-sm-3 col-6">
+          <button type="button" class="btn btn-light btnCaught">${
+            pokemonIndexOrder[i + 3]
+          }</button>
+      </div>
+    </div>
+    `;
+    i += 3;
+    pokemonIndex.insertAdjacentHTML("beforeend", html);
+    a = i + 1;
+  }
+
+  if (remainder == 1) {
+    const html = `
+        <div class="row">
+          <div class="col-sm-3 col-6">
+              <button type="button" class="btn btn-light btnCaught">${pokemonIndexOrder[a]}</button>
+          </div>
+        </div>
+        `;
+    pokemonIndex.insertAdjacentHTML("beforeend", html);
+  }
+  if (remainder == 2) {
+    const html = `
+        <div class="row">
+          <div class="col-sm-3 col-6">
+              <button type="button" class="btn btn-light btnCaught">${
+                pokemonIndexOrder[a]
+              }</button>
+          </div>
+          <div class="col-sm-3 col-6">
+            <button type="button" class="btn btn-light btnCaught">${
+              pokemonIndexOrder[a + 1]
+            }</button>
+          </div>
+        </div>
+        `;
+    pokemonIndex.insertAdjacentHTML("beforeend", html);
+  }
+  if (remainder == 3) {
+    const html = `
+          <div class="row">
+            <div class="col-sm-3 col-6">
+                <button type="button" class="btn btn-light btnCaught">${
+                  pokemonIndexOrder[a]
+                }</button>
+            </div>
+            <div class="col-sm-3 col-6">
+              <button type="button" class="btn btn-light btnCaught">${
+                pokemonIndexOrder[a + 1]
+              }</button>
+            </div>
+            <div class="col-sm-3 col-6">
+              <button type="button" class="btn btn-light btnCaught">${
+                pokemonIndexOrder[a + 2]
+              }</button>
+            </div>
+          </div>
+          `;
+    pokemonIndex.insertAdjacentHTML("beforeend", html);
+  }
+};
+pokemonIndexList();
+const btnCaught = document.querySelectorAll(".btnCaught");
+for (let i = 0; i < btnCaught.length; i++) {
+  btnCaught[i].addEventListener("click", function (e) {
+    // if (btnCaught[i].target.classList.includes("btn-light")) {
+    //   console.log("true");
+    // }
+    console.log(e.target.classList.contains("btn-light"));
+    if (e.target.classList.contains("btn-light")) {
+      btnCaught[i].classList.remove("btn-light");
+      btnCaught[i].classList.add("btn-dark");
+    } else {
+      btnCaught[i].classList.add("btn-light");
+      btnCaught[i].classList.remove("btn-dark");
+    }
+  });
+}
+
 const pokemonTable = document.getElementById(part);
-// let btn = "."+part+"btn"
-// console.log(btn)
 const btnPress = document.querySelectorAll("." + part + "btn");
 const btnClass = document.querySelectorAll("." + part + "-class");
 const btnPokemon = document.querySelectorAll("." + part + "pokemon");
-
 const appearBtn = document.querySelector("." + part + "-appear");
 const clearBtn = document.querySelector("." + part + "-clear");
 const entireTable = document.querySelectorAll("td");
-console.log(entireTable.length);
 const choiceText = document.getElementById("choice-text");
 const counterEl = document.getElementById("counter");
 
@@ -315,7 +414,7 @@ clearBtn.addEventListener("click", function () {
 // Hides and appears buttons
 for (let i = 0; i < btnClass.length; i++) {
   btnClass[i].addEventListener("click", function (e) {
-    console.log(e);
+    console.log(e.target.innerHTML);
     // console.log(document.getElementsByClassName("legend1-1-stars"))
     console.log(btnPokemon[0]);
 
@@ -323,9 +422,14 @@ for (let i = 0; i < btnClass.length; i++) {
       return document.getElementById("choice").classList.toggle("hidden");
     }
 
+    if (e.target.innerHTML == "Caught") {
+      return document.getElementById("caught").classList.toggle("hidden");
+    }
+
     if (e.target.innerHTML == "Hide") {
       return pokemonTable.classList.add("hidden");
     }
+
     for (let i = 1; i <= btnPokemon.length; i++) {
       console.log(e.target.innerHTML);
 
