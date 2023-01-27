@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+    <title>Legend 3</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Gaole</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="legend2.html">Legend 2</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="legend1.html">Legend 1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="part4.html">Part 4</a>
+              </li>
+              
+            </ul>
+
+          </div>
+        </div>
+
+      </nav>
+    <div class="container">  
+        <br>
+        <h1>Legend 3</h1>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <button type="button" class="btn btn-success btn-lg legend3-appear fixed-opacity">Select</button>
+                </div>
+                <div class="col-4">
+                    <img src="images/malaysia_legend3.jpeg" id="legend3brochure" alt="Malaysia_legend3">
+                </div>
+                <div class="col-4">
+                    <button type="button" class="btn btn-danger btn-lg legend3-clear">Clear</button>
+                </div>
+            </div>
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="legend3modal">
+            <div id="caption"></div>
+        </div>
+        
+        <div class="container hidden text-center" id="legend3">
+            <row>
+                <button type="button" class="btn btn-danger btn-lg legend3-class">1*</button>
+                <button type="button" class="btn btn-danger btn-lg legend3-class">2*</button>
+                <button type="button" class="btn btn-danger btn-lg legend3-class">3*</button>
+                <button type="button" class="btn btn-danger btn-lg legend3-class">4*</button>
+                <button type="button" class="btn btn-danger btn-lg legend3-class">5*</button>
+                <button type="button" class="btn btn-danger btn-lg legend3-class">L*</button>
+                <button type="button" class="btn btn-secondary btn-lg legend3-class">Hide</button>
+                <button type="button" class="btn btn-warning btn-lg legend3-class">Choice</button>
+                <!-- <button type="button" class="btn btn-info btn-lg legend3-class">Caught</button> -->
+            </row>
+                <div class="legend3pokemon hidden" id="choice">
+                    <p id="choice-text">Choose something!</p>
+                </div>
+                <div class="legend3pokemon 1* hidden">
+                    <div class="row">
+                        <h6>1 Star</h6>
+                    </div>
+                    <div class="oneStarPokemon">
+                        <!-- insert one stars -->
+                    </div>
+                   
+                </div>
+             
+                <div class="legend3pokemon 2* hidden">
+                    <div class="row">
+                        <h6>2 Star</h6>
+                    </div>
+                    <div class="twoStarPokemon">
+                        <!-- insert two stars -->
+                    </div>
+                </div>
+            <div class="legend3pokemon 3* hidden">
+                <div class="row">
+                    <h6>3 Star</h6>
+                </div>
+                <div class="threeStarPokemon">
+                    <!-- insert three stars -->
+                </div>
+            </div>
+            <div class="legend3pokemon 4* hidden">
+                <h6>4 Star</h6>
+                <div class="fourStarPokemon">
+                    <!-- insert four stars -->
+                </div>
+            </div>
+            <div class="legend3pokemon 5* hidden">
+                <h6>5 Star</h6>
+                <div class="fiveStarPokemon">
+                    <!-- insert five stars -->
+                </div>
+            </div>
+            
+            <div class="legend3pokemon L* hidden">
+                <h6>Lucky</h6>
+                <div class="LStarPokemon">
+                    <!-- insert Lucky stars -->
+                </div>
+            </div>
+        </div>    
+
+            <table class="table text-center" id="legend3-table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col"><span class="countA"></span></br>A</th>
+                        <th scope="col"><span class="countB"></span></br>B</th>
+                        <th scope="col"><span class="countC"></span></br>C</th>
+                        <th scope="col"><span class="countD"></span></br>D</th>
+                        <th scope="col"><span class="countE"></span></br>E</th>
+                        <th scope="col"><span class="countF"></span></br>F</th>
+                        <th scope="col"><span class="countG"></span></br>G</th>
+                        <th scope="col"><span class="countH"></span></br>H</th>
+                    </tr>
+                </thead>
+                <tbody class="pokemonList">
+                 <!-- Insert pokemons here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="script2.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script>
+        $(window).scroll(function(){
+            $('.fixed-opacity').toggleClass('scrolled',$(this).scrollTop()>50);
+        })
+    </script>
+</body>
+</html>
