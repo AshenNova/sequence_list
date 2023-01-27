@@ -286,12 +286,12 @@
     margin: 5% 0;
     font-size: 2em !important;
   }
-  /* #legend3,
+  #legend3,
   #legend2,
   #legend1,
   #part4 {
-    top: 100px;
-  } */
+    top: 250px;
+  }
   #caught {
     height: 300px;
   }
