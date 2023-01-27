@@ -184,7 +184,7 @@ const listAllPokemon = function () {
 listAllPokemon();
 
 let [...pokemonIndexOrder] = new Set(fullArray);
-console.log(pokemonIndexOrder.sort());
+console.log(pokemonIndexOrder.sort().reverse());
 const pokemonIndexList = function () {
   const quotient = Math.floor(pokemonIndexOrder.length / 4);
   const remainder = pokemonIndexOrder.length % 4;

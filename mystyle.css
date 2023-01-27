@@ -24,11 +24,16 @@
   border-radius: 5px;
 }
 
+/* .navbar-nav {
+  max-width: 3000px;
+} */
 /* 
 #counter {
 
 } */
-
+.navbar {
+  overflow-x: auto;
+}
 .fixed-opacity.scrolled {
   position: fixed;
   opacity: 0.7;
@@ -286,6 +291,7 @@
     margin: 5% 0;
     font-size: 2em !important;
   }
+
   #legend3,
   #legend2,
   #legend1,
