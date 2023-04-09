@@ -92,8 +92,8 @@
   transition: 0.3s;
 }
 
-#legend3brochure,
-#legend2brochure,
+#legend3brochure:hover,
+#legend2brochure:hover,
 #part4brochure:hover,
 #legend1brochure:hover {
   opacity: 0.7;

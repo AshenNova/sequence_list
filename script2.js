@@ -320,11 +320,11 @@ const img = document.getElementById(part + "brochure");
 const modalImg = document.getElementById(part + "modal");
 const captionText = document.getElementById("caption");
 
-// img.onclick = function () {
-//   modal.style.display = "block";
-//   modalImg.src = this.src;
-//   captionText.innerHTML = this.alt;
-// };
+img.onclick = function () {
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+};
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
